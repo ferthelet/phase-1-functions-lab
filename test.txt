@@ -21,38 +21,31 @@
       1) gives customers a free sample
       2) charges 2 cents per foot when total feet travelled is between 400 and 2000 (remember the first 400 feet are free!)
       3) charges 25 dollars for a distance over 2000 feet
-      4) does not allow rides over 2500 feet
+      ✓ does not allow rides over 2500 feet
 
 
-  9 passing (270ms)
-  4 failing
+  10 passing (255ms)
+  3 failing
 
   1) index.js
        calculatesFarePrice(start, destination)
          gives customers a free sample:
-     ReferenceError: calculatesFarePrice is not defined
-      at Context.<anonymous> (test/indexTest.js:48:7)
+     AssertionError: expected 'cannot travel that far' to equal 0
+      at Context.<anonymous> (test/indexTest.js:48:46)
       at process.processImmediate (node:internal/timers:476:21)
 
   2) index.js
        calculatesFarePrice(start, destination)
          charges 2 cents per foot when total feet travelled is between 400 and 2000 (remember the first 400 feet are free!):
-     ReferenceError: calculatesFarePrice is not defined
-      at Context.<anonymous> (test/indexTest.js:53:7)
+     AssertionError: expected 'cannot travel that far' to equal 2.56
+      at Context.<anonymous> (test/indexTest.js:53:46)
       at process.processImmediate (node:internal/timers:476:21)
 
   3) index.js
        calculatesFarePrice(start, destination)
          charges 25 dollars for a distance over 2000 feet:
-     ReferenceError: calculatesFarePrice is not defined
-      at Context.<anonymous> (test/indexTest.js:57:7)
-      at process.processImmediate (node:internal/timers:476:21)
-
-  4) index.js
-       calculatesFarePrice(start, destination)
-         does not allow rides over 2500 feet:
-     ReferenceError: calculatesFarePrice is not defined
-      at Context.<anonymous> (test/indexTest.js:61:7)
+     AssertionError: expected 'cannot travel that far' to equal 25
+      at Context.<anonymous> (test/indexTest.js:57:46)
       at process.processImmediate (node:internal/timers:476:21)
 
 

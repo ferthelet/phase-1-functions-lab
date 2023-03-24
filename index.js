@@ -21,3 +21,22 @@ function distanceTravelledInFeet(startBlock, destBlock) {
             distanceFromHqInFeet(startBlock);
 }
 
+function calculatesFarePrice(start, destination) {
+    //returns the fare for the customer
+    const freeDistance = 400;
+    const pricePerFt = 0.2;
+    const flatPrice = 25;
+    const distance = distanceTravelledInFeet(start, destination);
+
+    switch(distance) {
+        case (distance <= freeDistance) : 
+            return 0;
+        case (distance <= 2000) : 
+            return (distance - freeDistance) * pricePerFt;
+        case (distance <= 2500) :
+            return flatPrice;
+        default :
+            return 'cannot travel that far'
+    }
+
+}
