@@ -17,8 +17,7 @@ function distanceFromHqInFeet(block) {
 function distanceTravelledInFeet(startBlock, destBlock) {
     // takes in both the start and destination blocks, and returns
     // the number of feet travelled.
-    return  distanceFromHqInFeet((startBlock)) +
-            distanceFromHqInFeet((destBlock));
+    return  distanceFromHqInFeet(destBlock) -
+            distanceFromHqInFeet(startBlock);
 }
 
-console.log(distanceFromHqInFeet(43) );
